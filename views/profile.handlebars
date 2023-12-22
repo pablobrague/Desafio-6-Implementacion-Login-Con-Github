@@ -1,0 +1,31 @@
+{{>navbar}}
+<div class="card w-25" style="margin:0 auto;">
+  <h5 class="card-header">Mi Perfil</h5>
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Usuario</th>
+          <td>{{user.email}}</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="col">Nombre</th>
+          <td>{{user.nombre}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Apellido</th>
+          <td>{{user.apellido}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Nivel Usuario</th>
+          <td>{{user.level}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <form action="/logout" method="post">
+      <button type="submit" class="btn btn-primary">Cerrar Sesión</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+{{>navbarNoLog}}
+<div class="card w-25" style="margin:0 auto;">
+    <h5 class="card-header">Registro</h5>
+    <div class="card-body">
+        <form action="/register" method="post">
+            {{#if userExist}}
+            <div class="alert alert-warning" role="alert">
+                El usuario {{userMail}} ya existe.
+            </div>
+            {{/if}}
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Email</span>
+                <input type="email" name="email" class="form-control" placeholder="aaaaa@email.com" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Contraseña</span>
+                <input type="password" name="password" class="form-control" placeholder="Contraseña" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Apellido</span>
+                <input type="text" name="apellido" class="form-control" placeholder="Apellido" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>

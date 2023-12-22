@@ -1,0 +1,15 @@
+<div class="card-footer text-body-secondary">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end" id="navBar">
+            <li class="page-item {{#if results.hasPrevPage}} {{else}}disabled{{/if}}">
+                <a class="page-link" {{#if results.hasPrevPage}} href="/productos{{results.prevLink}}" {{/if}} >Anterior</a>
+            </li>
+            {{#each results.navBar}}
+            <li class="page-item"><a class="page-link {{this.status}}" href="/productos/?pagina={{this.page}}">{{this.page}}</a></li>
+            {{/each}}
+            <li class="page-item {{#if results.hasNextPage}} {{else}}disabled{{/if}}">
+                <a class="page-link" {{#if results.hasNextPage}} href="/productos{{results.nextLink}}" {{/if}}>Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+</div>

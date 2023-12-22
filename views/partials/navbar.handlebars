@@ -1,0 +1,18 @@
+  <nav class="navbar navbar-expand-lg" style="margin-bottom: 1%;padding-left:39%; background-color: green">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="color: white; font-size: 22px">Mercado Nacional</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: space-between">
+                <div class="navbar-nav" style="text-align: right;">
+                    <a class="nav-link" href="#" style="color: white; font-size: 17px">Bienvenido {{user.nombre}} <span class="badge text-bg-secondary">{{user.level}}</span></a>
+                    {{#if isAdmin}}
+                    <a class="nav-link" href="/profile" style="color: white; font-size: 17px">Panel de Administrador</a>
+                    {{/if}}
+                    <a class="nav-link" href="/profile" style="color: white; font-size: 17px">Mi Perfil</a>
+                </div>
+            </div>
+        </div>
+    </nav>
